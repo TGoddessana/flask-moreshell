@@ -1,0 +1,43 @@
+[project]
+
+name = "flask-moreshell"
+
+version = "0.0.1"
+
+description = "flask shell with IPython, BPython!"
+
+readme = "README.md"
+
+requires-python = ">=3.8"
+
+license = { file = "LICENSE" }
+
+authors = [
+    { email = "twicegoddessana1229@gmail.com" }
+]
+
+maintainers = [
+    { email = "twicegoddessana1229@gmail.com" }
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Framework :: Flask",
+    "Framework :: Jupyter",
+    "Framework :: IPython",
+]
+
+dependencies = [
+    "flask",
+    "jupyter",
+    "ipython",
+    "bpython"
+]
+
+[project.urls]
+repository = "https://github.com"
