@@ -36,19 +36,19 @@ ipython usage:
 ```shell
 flask shell --shelltype ipython
 ```
-![ipython-example.png](docs%2Fipython-example.png)
+![ipython-example.png](docs/ipython-example.png)
 
 bpython usage:
 ```shell
 flask shell --shelltype bpython
 ```
-![bpython-example.png](docs%2Fbpython-example.png)
+![bpython-example.png](docs/Fbpython-example.png)
 
 ptpython usage:
 ```shell
 flask shell --shelltype ptpython
 ```
-![ptpython-example.png](docs%2Fptpython-example.png)
+![ptpython-example.png](docs/ptpython-example.png)
 
 ## License
 
