@@ -4,7 +4,7 @@ name = "flask-moreshell"
 
 version = "0.0.1"
 
-description = "flask shell with IPython, BPython!"
+description = "flask shell with IPython, BPython, PTPython!"
 
 readme = "README.md"
 
@@ -28,15 +28,13 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Framework :: Flask",
-    "Framework :: Jupyter",
     "Framework :: IPython",
+    "Framework :: BPython",
+    "Framework :: PTPython",
 ]
 
 dependencies = [
     "flask",
-    "jupyter",
-    "ipython",
-    "bpython"
 ]
 
 [project.urls]
