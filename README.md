@@ -42,7 +42,7 @@ bpython usage:
 ```shell
 flask shell --shelltype bpython
 ```
-![bpython-example.png](docs/Fbpython-example.png)
+![bpython-example.png](docs/bpython-example.png)
 
 ptpython usage:
 ```shell
