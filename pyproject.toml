@@ -29,8 +29,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Framework :: Flask",
     "Framework :: IPython",
-    "Framework :: BPython",
-    "Framework :: PTPython",
 ]
 
 dependencies = [
