@@ -9,11 +9,17 @@ from flask.globals import current_app
 @click.command(context_settings=dict(ignore_unknown_options=True))
 @click.option("--shelltype", type=click.STRING, default=None)
 @with_appcontext
-def shell(shelltype):
-    """If you have IPython, PYTPython, or BPython installed, run them with your Flask application.
+def shell(shelltype: str):
+    """
+    Run `flask shell` command with IPython, BPython, PTPython.
+
+    If you have IPython, PYTPython, or BPython installed, run them with your Flask application.
     if none of them are installed, this loads the default python shell.
 
-    you can specify type of shell with --shelltype option."""
+    you can specify type of shell with --shelltype option.
+
+    :param shelltype: type of shell to use.
+    """
     if shelltype:
         try:
             if shelltype == "ipython":
@@ -71,7 +77,7 @@ def load_ipython():
 
 def load_bpython():
     """load bpython shell, with current application."""
-    import bpython
+    import bpython  # type: ignore[import]
 
     banner = "".join(
         f"Python {sys.version} on {sys.platform}\n"

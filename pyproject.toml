@@ -2,7 +2,7 @@
 
 name = "flask-moreshell"
 
-version = "0.0.1"
+version = "0.0.2"
 
 description = "flask shell with IPython, BPython, PTPython!"
 
