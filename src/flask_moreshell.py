@@ -10,12 +10,10 @@ from flask.globals import current_app
 @click.option("--shelltype", type=click.STRING, default=None)
 @with_appcontext
 def shell(shelltype):
-    """
-    tries to find IPython, Bpython, PTPython.
+    """If you have IPython, PYTPython, or BPython installed, run them with your Flask application.
     if none of them are installed, this loads the default python shell.
 
-    you can specify type of shell with --shelltype option.
-    """
+    you can specify type of shell with --shelltype option."""
     if shelltype:
         try:
             if shelltype == "ipython":
@@ -121,8 +119,6 @@ def load_python():
     import code
 
     ctx: dict = {}
-    # Support the regular Python interpreter startup script if someone
-    # is using it.
     startup = os.environ.get("PYTHONSTARTUP")
     if startup and os.path.isfile(startup):
         with open(startup) as f:
