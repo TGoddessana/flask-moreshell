@@ -1,5 +1,9 @@
 # Flask-Moreshell
 
+<p align="left">
+  <img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/c621f139-7b36-479e-a215-20738ca578ff" style="width: 30%;">
+</p>
+
 Flask-Moreshell is a flask extension which supports ipython, bpython, ptpython shells in `flask shell` command.
 inspired
 by [flask-shell-ipython](https://github.com/ei-grad/flask-shell-ipython), [flask-shell-bpython](https://github.com/jacquerie/flask-shell-bpython), [flask-shell-ptpython](https://github.com/jacquerie/flask-shell-ptpython).
