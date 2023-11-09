@@ -20,4 +20,3 @@ def test_python_shell(runner: CliRunner) -> None:
     assert result.exit_code == 0
     assert "Python" in result.output
     assert ">>> " in result.output
-
