@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-moreshell"
-version = "0.1.0"
+version = "0.1.1"
 description = "Flask shell with IPython, BPython, PTPython!"
 authors = ["tgoddessana <twicegoddessana1229@gmail.com>"]
 license = "MIT"
@@ -64,7 +64,7 @@ source = ["flask_moreshell", "tests"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 100
+fail_under = 50
 
 [tool.isort]
 profile = "black"

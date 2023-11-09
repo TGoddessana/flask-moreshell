@@ -57,7 +57,7 @@ and flask-moreshell tries to find this python REPL alternatives:
 
 if none of them are installed, just default python shell will be executed.
 
-or you can choose specific shell type, via `--shelltype` option.  
+or you can choose specific shell type, via `--shelltype` option.
 `ipython`, `bpython`, `ptpython` are supported.
 
 ipython usage:
@@ -65,18 +65,23 @@ ipython usage:
 ```shell
 flask shell --shelltype ipython
 ```
+
 ![ipython-example.png](docs/ipython-example.png)
 
 bpython usage:
+
 ```shell
 flask shell --shelltype bpython
 ```
+
 ![bpython-example.png](docs/bpython-example.png)
 
 ptpython usage:
+
 ```shell
 flask shell --shelltype ptpython
 ```
+
 ![ptpython-example.png](docs/ptpython-example.png)
 
 ## Contributing
@@ -93,7 +98,6 @@ _Flask Moreshell_ is free and open source software.
 
 If you encounter any problems,
 please [file an issue] along with a detailed description.
-
 
 [pypi]: https://pypi.org/å
 [file an issue]: https://github.com/tgoddessana/flask-moreshell/issues
