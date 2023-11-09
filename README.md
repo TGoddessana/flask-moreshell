@@ -47,8 +47,6 @@ $ pip install flask-moreshell
 
 ## Usage
 
-## Usage
-
 you can just use this command:
 
 ```shell
@@ -90,48 +88,6 @@ flask shell --shelltype ptpython
 
 ![ptpython-example.png](docs/ptpython-example.png)
 
-## Usage
-
-you can just use this command:
-
-```shell
-flask shell
-```
-
-and flask-moreshell tries to find this python REPL alternatives:
-
-1. `ipython`
-2. `bpython`
-3. `ptpython`
-
-if none of them are installed, just default python shell will be executed.
-
-or you can choose specific shell type, via `--shelltype` option.
-`ipython`, `bpython`, `ptpython` are supported.
-
-ipython usage:
-
-```shell
-flask shell --shelltype ipython
-```
-
-![ipython-example.png](docs/ipython-example.png)
-
-bpython usage:
-
-```shell
-flask shell --shelltype bpython
-```
-
-![bpython-example.png](docs/bpython-example.png)
-
-ptpython usage:
-
-```shell
-flask shell --shelltype ptpython
-```
-
-![ptpython-example.png](docs/ptpython-example.png)
 
 ## Contributing
 
