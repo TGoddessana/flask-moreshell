@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-moreshell"
-version = "0.1.0"
+version = "0.1.1"
 description = "Flask shell with IPython, BPython, PTPython!"
 authors = ["tgoddessana <twicegoddessana1229@gmail.com>"]
 license = "MIT"
