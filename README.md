@@ -1,5 +1,9 @@
 # Flask Moreshell
 
+<p align="left">
+  <img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/c621f139-7b36-479e-a215-20738ca578ff" style="width: 30%;">
+</p>
+
 [![PyPI](https://img.shields.io/pypi/v/flask-moreshell.svg)][pypi_]
 [![Status](https://img.shields.io/pypi/status/flask-moreshell.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/flask-moreshell)][python version]
