@@ -1,9 +1,5 @@
 # Flask Moreshell
 
-<p align="left">
-  <img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/c621f139-7b36-479e-a215-20738ca578ff" style="width: 30%;">
-</p>
-
 [![PyPI](https://img.shields.io/pypi/v/flask-moreshell.svg)][pypi_]
 [![Status](https://img.shields.io/pypi/status/flask-moreshell.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/flask-moreshell)][python version]
@@ -25,13 +21,21 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
-## Features
+<p align="left">
+  <img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/c621f139-7b36-479e-a215-20738ca578ff" style="width: 30%;">
+</p>
 
-- TODO
+Flask-Moreshell is a flask extension which supports ipython, bpython, ptpython shells in `flask shell` command.
+inspired
+by [flask-shell-ipython](https://github.com/ei-grad/flask-shell-ipython), [flask-shell-bpython](https://github.com/jacquerie/flask-shell-bpython), [flask-shell-ptpython](https://github.com/jacquerie/flask-shell-ptpython).
 
-## Requirements
+## Installation
 
-- TODO
+you can install `flask-moreshell` via `pip` command.
+
+```bash
+pip install flask-moreshell
+```
 
 ## Installation
 
@@ -43,7 +47,48 @@ $ pip install flask-moreshell
 
 ## Usage
 
-Please see the [Command-line Reference] for details.
+## Usage
+
+you can just use this command:
+
+```shell
+flask shell
+```
+
+and flask-moreshell tries to find this python REPL alternatives:
+
+1. `ipython`
+2. `bpython`
+3. `ptpython`
+
+if none of them are installed, just default python shell will be executed.
+
+or you can choose specific shell type, via `--shelltype` option.
+`ipython`, `bpython`, `ptpython` are supported.
+
+ipython usage:
+
+```shell
+flask shell --shelltype ipython
+```
+
+![ipython-example.png](docs/ipython-example.png)
+
+bpython usage:
+
+```shell
+flask shell --shelltype bpython
+```
+
+![bpython-example.png](docs/bpython-example.png)
+
+ptpython usage:
+
+```shell
+flask shell --shelltype ptpython
+```
+
+![ptpython-example.png](docs/ptpython-example.png)
 
 ## Usage
 
