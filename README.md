@@ -13,19 +13,12 @@
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 
 [pypi_]: https://pypi.org/project/flask-moreshell/
-
 [status]: https://pypi.org/project/flask-moreshell/
-
 [python version]: https://pypi.org/project/flask-moreshell
-
 [read the docs]: https://flask-moreshell.readthedocs.io/
-
 [tests]: https://github.com/tgoddessana/flask-moreshell/actions?workflow=Tests
-
 [codecov]: https://app.codecov.io/gh/tgoddessana/flask-moreshell
-
 [pre-commit]: https://github.com/pre-commit/pre-commit
-
 [black]: https://github.com/psf/black
 
 ## Features
@@ -64,15 +57,11 @@ If you encounter any problems,
 please [file an issue] along with a detailed description.
 
 [pypi]: https://pypi.org/
-
 [file an issue]: https://github.com/tgoddessana/flask-moreshell/issues
-
 [pip]: https://pip.pypa.io/
 
 <!-- github-only -->
 
 [license]: https://github.com/tgoddessana/flask-moreshell/blob/main/LICENSE
-
 [contributor guide]: https://github.com/tgoddessana/flask-moreshell/blob/main/CONTRIBUTING.md
-
 [command-line reference]: https://flask-moreshell.readthedocs.io/en/latest/usage.html
