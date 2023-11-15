@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-moreshell"
-version = "0.1.2"
+version = "0.1.1"
 description = "Flask Moreshell"
 authors = ["JAEGYUN JUNG <twicegoddessana1229@gmail.com>"]
 license = "MIT"
