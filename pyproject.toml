@@ -20,13 +20,11 @@ python = "^3.9"
 click = ">=8.0.1"
 nox-poetry = "^1.0.3"
 nox = "^2023.4.22"
-flask = "^2.3"
 
 [tool.poetry.scripts]
 flask-moreshell = "flask_moreshell.__main__:main"
 
 [tool.poetry.group.development.dependencies]
-ipython = "^8.17.2"
 Pygments = ">=2.10.0"
 black = ">=21.10b0"
 coverage = { extras = ["toml"], version = ">=6.2" }
@@ -50,8 +48,10 @@ sphinx-click = ">=3.0.2"
 typeguard = ">=2.13.3"
 xdoctest = { extras = ["colors"], version = ">=0.15.10" }
 myst-parser = { version = ">=0.16.1" }
+ipython = "^8.17.2"
 ptpython = "^3.0.23"
 bpython = "^0.24"
+flask = "^2.3"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
