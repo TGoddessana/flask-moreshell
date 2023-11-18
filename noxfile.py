@@ -147,11 +147,13 @@ def mypy(session: Session) -> None:
         session.run("mypy", f"--python-executable={sys.executable}", "noxfile.py")
 
 
-@session(python=python_versions)
-def tests(session: Session) -> None:
+@nox.session(python=python_versions)
+@nox.parametrize("flask_version", ["2.3", "3.0"])
+def tests(session: Session, flask_version: str) -> None:
     """Run the test suite."""
     session.install(".")
     session.install("coverage[toml]", "pytest", "pygments")
+    session.install(f"flask=={flask_version}")
     try:
         session.run("coverage", "run", "--parallel", "-m", "pytest", *session.posargs)
     finally:
@@ -163,7 +165,6 @@ def tests(session: Session) -> None:
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     args = session.posargs or ["report"]
-
     session.install("coverage[toml]")
 
     if not session.posargs and any(Path().glob(".coverage.*")):
