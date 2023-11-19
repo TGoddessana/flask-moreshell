@@ -22,9 +22,9 @@ class IpythonShell(BaseShell):
 
     def load(self) -> None:
         config = self._get_config()
-        config.TerminalInteractiveShell.banner1 = self.get_banner()
+        config.TerminalInteractiveShell.banner1 = self.get_banner()  # type: ignore
 
-        IPython.start_ipython(
+        IPython.start_ipython(  # type: ignore
             argv=[],
             user_ns=current_app.make_shell_context(),
             config=config,
@@ -34,4 +34,4 @@ class IpythonShell(BaseShell):
     def _get_config() -> Any | None:
         if "IPYTHON_CONFIG" in current_app.config:
             return Config(current_app.config["IPYTHON_CONFIG"])
-        return load_default_config()
+        return load_default_config()  # type: ignore

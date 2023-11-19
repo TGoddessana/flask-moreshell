@@ -23,7 +23,7 @@ shells = {
     type=click.Choice(["ipython", "bpython", "ptpython", "python"]),
     default=None,
 )
-@with_appcontext
+@with_appcontext  # type: ignore
 def shell(shelltype: str) -> None:
     """Run `flask shell` command with IPython, BPython, PTPython.
 
@@ -38,7 +38,8 @@ def shell(shelltype: str) -> None:
 
     def try_load_shell(_shelltype: str) -> None:
         shell_class = shells.get(_shelltype)
-        shell_class().load()
+        assert shell_class is not None  # noqa S101
+        shell_class().load()  # type: ignore
 
     # If the user specifies a shell type, try to load it
     if shelltype:
