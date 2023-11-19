@@ -21,6 +21,12 @@ click = ">=8.0.1"
 nox-poetry = "^1.0.3"
 nox = "^2023.4.22"
 
+[tool.poetry.extras]
+ipython = ["ipython"]
+ptpython = ["ptpython"]
+bpython = ["bpython"]
+all = ["ipython", "ptpython", "bpython"]
+
 [tool.poetry.scripts]
 flask-moreshell = "flask_moreshell.__main__:main"
 
@@ -72,6 +78,7 @@ lines_after_imports = 2
 
 [tool.mypy]
 strict = true
+exclude = ["tests"]
 warn_unreachable = true
 pretty = true
 show_column_numbers = true
