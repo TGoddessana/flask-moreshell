@@ -1,4 +1,4 @@
-![flask-moreshell-logo](https://github.com/TGoddessana/flask-moreshell/assets/88619089/804d2934-be56-4ea7-8ad8-9c787d5b2dd2)
+<img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/804d2934-be56-4ea7-8ad8-9c787d5b2dd2" style="width: 40%">
 
 # Flask Moreshell
 
@@ -64,7 +64,7 @@ use the `flask shell` command, the package will look for and load the Python REP
 
 if you want to use a specific shell, you can use the `--shelltype` option.
 
-see [Command-line reference] for more information.
+see [Usage] for more information.
 
 ## Contributing
 
@@ -89,4 +89,4 @@ please [file an issue] along with a detailed description.
 
 [license]: https://github.com/tgoddessana/flask-moreshell/blob/main/LICENSE
 [contributor guide]: https://github.com/tgoddessana/flask-moreshell/blob/main/CONTRIBUTING.md
-[command-line reference]: https://flask-moreshell.readthedocs.io/en/latest/usage.html
+[usage]: https://flask-moreshell.readthedocs.io/en/latest/usage.html
