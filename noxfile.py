@@ -151,6 +151,9 @@ def mypy(session: Session) -> None:
 @nox.parametrize("flask_version", ["2.3", "3.0"])
 def tests(session: Session, flask_version: str) -> None:
     """Run the test suite."""
+    session.install("ipython")
+    session.install("bpython")
+    session.install("ptpython")
     session.install(".")
     session.install("coverage[toml]", "pytest", "pygments")
     session.install(f"flask=={flask_version}")
