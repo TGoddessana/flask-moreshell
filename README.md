@@ -50,7 +50,7 @@ or [pipenv](https://pipenv.pypa.io/en/latest/).
 
 after the package is installed, you can use the `flask shell` command as usual.
 
-```console
+```shell
 $ flask shell
 ```
 
@@ -64,7 +64,7 @@ use the `flask shell` command, the package will look for and load the Python REP
 
 if you want to use a specific shell, you can use the `--shelltype` option.
 
-```console
+```shell
 $ flask shell --shelltype bpython
 ```
 
