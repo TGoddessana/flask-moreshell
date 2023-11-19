@@ -91,15 +91,14 @@ and are written using the [pytest] testing framework.
 
 Open a [pull request] to submit changes to this project.
 
-Your pull request needs to meet the following guidelines for acceptance:
-
-- The Nox test suite must pass without errors and warnings.
-- Include unit tests. This project maintains 100% code coverage.
-- If your changes add functionality, update the documentation accordingly.
+warning:: this project is still in its early stages. still, CI-CD workflow is not yet implemented.
+so do not worry to much about the test(coverage, mypy, typeguard or etc). our first priority is to get the project have
+a stable test workflow.
 
 Feel free to submit early, though—we can always iterate on this.
 
-To run linting and code formatting checks before committing your change, you can install pre-commit as a Git hook by running the following command:
+To run linting and code formatting checks before committing your change, you can install pre-commit as a Git hook by
+running the following command:
 
 ```console
 $ nox --session=pre-commit -- install
