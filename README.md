@@ -7,7 +7,7 @@ flask shell with IPython, BPython, PTPython!
 [![PyPI](https://img.shields.io/pypi/v/flask-moreshell.svg)][pypi_]
 [![Status](https://img.shields.io/pypi/status/flask-moreshell.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/flask-moreshell)][python version]
-[![License](https://img.shields.io/pypi/l/flask-moreshell)][license]
+[![License](https://img.shields.io/badge/license-MIT-blue)][license]
 
 [![Read the documentation at https://flask-moreshell.readthedocs.io/](https://img.shields.io/readthedocs/flask-moreshell/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/tgoddessana/flask-moreshell/workflows/Tests/badge.svg)][tests]
