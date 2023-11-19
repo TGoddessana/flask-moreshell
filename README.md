@@ -1,9 +1,13 @@
+<img src="https://github.com/TGoddessana/flask-moreshell/assets/88619089/804d2934-be56-4ea7-8ad8-9c787d5b2dd2" style="width: 40%">
+
 # Flask Moreshell
+
+flask shell with IPython, BPython, PTPython!
 
 [![PyPI](https://img.shields.io/pypi/v/flask-moreshell.svg)][pypi_]
 [![Status](https://img.shields.io/pypi/status/flask-moreshell.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/flask-moreshell)][python version]
-[![License](https://img.shields.io/pypi/l/flask-moreshell)][license]
+[![License](https://img.shields.io/badge/license-MIT-blue)][license]
 
 [![Read the documentation at https://flask-moreshell.readthedocs.io/](https://img.shields.io/readthedocs/flask-moreshell/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/tgoddessana/flask-moreshell/workflows/Tests/badge.svg)][tests]
@@ -23,11 +27,13 @@
 
 ## Features
 
-- TODO
+This package provides functionality to allow flask shell commands to be used with the ipython, bpython, and ptpython
+shells.
 
 ## Requirements
 
-- TODO
+- Python 3.9+
+- Flask 2.3+
 
 ## Installation
 
@@ -37,9 +43,28 @@ You can install _Flask Moreshell_ via [pip] from [PyPI]:
 $ pip install flask-moreshell
 ```
 
+or anything else that can install packages from PyPI. for example, [poetry](https://python-poetry.org/)
+or [pipenv](https://pipenv.pypa.io/en/latest/).
+
 ## Usage
 
-Please see the [Command-line Reference] for details.
+after the package is installed, you can use the `flask shell` command as usual.
+
+```shell
+$ flask shell
+```
+
+and you can see python REPLs like this, with flask app loaded.
+
+![shell_usage](https://github.com/TGoddessana/flask-moreshell/assets/88619089/fdbdb4de-1f18-48fd-84da-d7dae2eb88ad)
+
+By default, make sure that `ipython`, `bpython`, and `ptpython` are installed in your current virtual environment. When
+you
+use the `flask shell` command, the package will look for and load the Python REPLs in that order.
+
+if you want to use a specific shell, you can use the `--shelltype` option.
+
+see [Usage] for more information.
 
 ## Contributing
 
@@ -64,4 +89,4 @@ please [file an issue] along with a detailed description.
 
 [license]: https://github.com/tgoddessana/flask-moreshell/blob/main/LICENSE
 [contributor guide]: https://github.com/tgoddessana/flask-moreshell/blob/main/CONTRIBUTING.md
-[command-line reference]: https://flask-moreshell.readthedocs.io/en/latest/usage.html
+[usage]: https://flask-moreshell.readthedocs.io/en/latest/usage.html
