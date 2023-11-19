@@ -1,4 +1,4 @@
-![flask-moreshell-logo.jpg](docs%2Fflask-moreshell-logo.jpg)
+![flask-moreshell-logo](https://github.com/TGoddessana/flask-moreshell/assets/88619089/804d2934-be56-4ea7-8ad8-9c787d5b2dd2)
 
 # Flask Moreshell
 
@@ -56,7 +56,7 @@ $ flask shell
 
 and you can see python REPLs like this, with flask app loaded.
 
-![shell_usage.png](docs%2Fshell_usage.png)
+![shell_usage](https://github.com/TGoddessana/flask-moreshell/assets/88619089/fdbdb4de-1f18-48fd-84da-d7dae2eb88ad)
 
 By default, make sure that `ipython`, `bpython`, and `ptpython` are installed in your current virtual environment. When
 you
@@ -64,13 +64,7 @@ use the `flask shell` command, the package will look for and load the Python REP
 
 if you want to use a specific shell, you can use the `--shelltype` option.
 
-```shell
-$ flask shell --shelltype bpython
-```
-
-![shelltype_usage_bpython.png](docs%2Fshelltype_usage_bpython.png)
-
-so that's all. enjoy, and go crush your flask bugs!
+see [Command-line reference] for more information.
 
 ## Contributing
 

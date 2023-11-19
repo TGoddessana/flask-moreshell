@@ -1,11 +1,5 @@
 # Usage
 
-```{eval-rst}
-.. click:: flask_moreshell.__main__:main
-    :prog: flask-moreshell
-    :nested: full
-```
-
 after the package is installed, you can use the `flask shell` command as usual.
 
 ```console

@@ -2311,4 +2311,4 @@ ptpython = []
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "e423e4a8c77c583a5d4729f338f12922f5cc28f4bf8f34f0da516665ae80efc0"
+content-hash = "678083c5acc0eb023e9a17248bd889f2cdd05fb6235b7e963ae6b0a37cbda23a"
