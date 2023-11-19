@@ -1,4 +1,8 @@
+![flask-moreshell-logo.jpg](docs%2Fflask-moreshell-logo.jpg)
+
 # Flask Moreshell
+
+flask shell with IPython, BPython, PTPython!
 
 [![PyPI](https://img.shields.io/pypi/v/flask-moreshell.svg)][pypi_]
 [![Status](https://img.shields.io/pypi/status/flask-moreshell.svg)][status]
@@ -23,11 +27,13 @@
 
 ## Features
 
-- TODO
+This package provides functionality to allow flask shell commands to be used with the ipython, bpython, and ptpython
+shells.
 
 ## Requirements
 
-- TODO
+- Python 3.9+
+- Flask 2.3+
 
 ## Installation
 
@@ -37,9 +43,34 @@ You can install _Flask Moreshell_ via [pip] from [PyPI]:
 $ pip install flask-moreshell
 ```
 
+or anything else that can install packages from PyPI. for example, [poetry](https://python-poetry.org/)
+or [pipenv](https://pipenv.pypa.io/en/latest/).
+
 ## Usage
 
-Please see the [Command-line Reference] for details.
+after the package is installed, you can use the `flask shell` command as usual.
+
+```console
+$ flask shell
+```
+
+and you can see python REPLs like this, with flask app loaded.
+
+![shell_usage.png](docs%2Fshell_usage.png)
+
+By default, make sure that `ipython`, `bpython`, and `ptpython` are installed in your current virtual environment. When
+you
+use the `flask shell` command, the package will look for and load the Python REPLs in that order.
+
+if you want to use a specific shell, you can use the `--shelltype` option.
+
+```console
+$ flask shell --shelltype bpython
+```
+
+![shelltype_usage_bpython.png](docs%2Fshelltype_usage_bpython.png)
+
+so that's all. enjoy, and go crush your flask bugs!
 
 ## Contributing
 
