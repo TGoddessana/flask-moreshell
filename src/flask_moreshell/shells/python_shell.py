@@ -1,7 +1,7 @@
 import code
 import sys
 
-from flask_moreshell.shells import BaseShell
+from flask_moreshell.shells.base_shell import BaseShell
 
 
 class PythonShell(BaseShell):

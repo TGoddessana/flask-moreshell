@@ -4,7 +4,7 @@ from typing import Union
 
 from flask.globals import current_app
 
-from flask_moreshell.shells import BaseShell
+from flask_moreshell.shells.base_shell import BaseShell
 
 
 try:
@@ -15,7 +15,7 @@ except ModuleNotFoundError as e:
     raise ModuleNotFoundError("IPython is not installed on your system.") from e
 
 
-class IpythonShell(BaseShell):
+class IPythonShell(BaseShell):
     def get_shell_name(self) -> str:
         return "IPython"
 

@@ -1,9 +1,13 @@
 import sys
 from importlib.metadata import version
 
-from ptpython.repl import embed
 
-from flask_moreshell.shells import BaseShell
+try:
+    from ptpython.repl import embed
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError("PTPython is not installed on your system.") from e
+
+from flask_moreshell.shells.base_shell import BaseShell
 
 
 class PTPythonShell(BaseShell):

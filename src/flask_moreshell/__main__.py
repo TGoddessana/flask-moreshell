@@ -1,20 +1,8 @@
+import importlib
 import sys
 
 import click
 from flask.cli import with_appcontext
-
-from flask_moreshell.shells import BPythonShell
-from flask_moreshell.shells import IpythonShell
-from flask_moreshell.shells import PTPythonShell
-from flask_moreshell.shells import PythonShell
-
-
-shells = {
-    "ipython": IpythonShell,
-    "bpython": BPythonShell,
-    "ptpython": PTPythonShell,
-    "python": PythonShell,
-}
 
 
 @click.command(context_settings=dict(ignore_unknown_options=True))
@@ -35,23 +23,31 @@ def shell(shelltype: str) -> None:
 
     :param shelltype: type of shell to use.
     """
+    shell_classes = {
+        "ipython": "IPythonShell",
+        "bpython": "BPythonShell",
+        "ptpython": "PTPythonShell",
+        "python": "PythonShell",
+    }
 
-    def try_load_shell(_shelltype: str) -> None:
-        shell_class = shells.get(_shelltype)
-        assert shell_class is not None  # noqa S101
-        shell_class().load()  # type: ignore
-
-    # If the user specifies a shell type, try to load it
     if shelltype:
-        try_load_shell(shelltype)
+        shell_class = shell_classes[shelltype]
+        try:
+            shell_module = importlib.import_module(
+                f"flask_moreshell.shells.{shelltype}_shell"
+            )
+            shell_class = getattr(shell_module, shell_class)
+            shell_class().load()
+        except ModuleNotFoundError as e:
+            print(e)
     else:
-        preferred_shells = ["ipython", "bpython", "ptpython", "python"]
-        for shelltype in preferred_shells:
+        for shell_class in shell_classes.keys():
             try:
-                try_load_shell(shelltype)
-                break
+                shell_module = importlib.import_module(
+                    f"flask_moreshell.shells.{shell_class}_shell"
+                )
+                shell_class = getattr(shell_module, shell_classes[shell_class])
+                shell_class().load()
+                sys.exit(0)
             except ModuleNotFoundError:
                 continue
-    if not shelltype:
-        print("No shell type is installed or recognized on your system.")
-        sys.exit(1)
