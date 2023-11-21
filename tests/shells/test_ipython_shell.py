@@ -1,11 +1,11 @@
 import pytest
 
-from flask_moreshell.shells import IpythonShell
+from flask_moreshell.shells.ipython_shell import IPythonShell
 
 
 @pytest.fixture
 def ipython_shell():
-    return IpythonShell()
+    return IPythonShell()
 
 
 def test_get_shell_name(ipython_shell):

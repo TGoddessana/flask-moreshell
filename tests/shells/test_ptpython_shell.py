@@ -3,7 +3,7 @@ from importlib.metadata import version
 import pytest
 from flask import Flask
 
-from flask_moreshell.shells import PTPythonShell
+from flask_moreshell.shells.ptpython_shell import PTPythonShell
 
 
 @pytest.fixture
