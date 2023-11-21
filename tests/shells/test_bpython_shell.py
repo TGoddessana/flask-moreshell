@@ -2,7 +2,7 @@ from importlib.metadata import version
 
 import pytest
 
-from flask_moreshell.shells import BPythonShell
+from flask_moreshell.shells.bpython_shell import BPythonShell
 
 
 @pytest.fixture

@@ -1,8 +1,10 @@
 from typing import Any
+from typing import Optional
+from typing import Union
 
 from flask.globals import current_app
 
-from flask_moreshell.shells import BaseShell
+from flask_moreshell.shells.base_shell import BaseShell
 
 
 try:
@@ -13,7 +15,7 @@ except ModuleNotFoundError as e:
     raise ModuleNotFoundError("IPython is not installed on your system.") from e
 
 
-class IpythonShell(BaseShell):
+class IPythonShell(BaseShell):
     def get_shell_name(self) -> str:
         return "IPython"
 
@@ -31,7 +33,7 @@ class IpythonShell(BaseShell):
         )
 
     @staticmethod
-    def _get_config() -> Any | None:
+    def _get_config() -> Union[Config, Optional[Any]]:
         if "IPYTHON_CONFIG" in current_app.config:
             return Config(current_app.config["IPYTHON_CONFIG"])
         return load_default_config()  # type: ignore
