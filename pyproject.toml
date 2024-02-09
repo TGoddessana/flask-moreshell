@@ -78,7 +78,6 @@ lines_after_imports = 2
 
 [tool.mypy]
 strict = true
-exclude = ["^tests"]
 warn_unreachable = true
 pretty = true
 show_column_numbers = true
