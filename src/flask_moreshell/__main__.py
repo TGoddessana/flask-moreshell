@@ -1,8 +1,25 @@
-import importlib
 import sys
+from importlib import import_module
 
 import click
 from flask.cli import with_appcontext
+
+from flask_moreshell.shells.base_shell import BaseShell
+
+
+def _get_shell_instance(shelltype: str, shell_classes: dict[str, str]) -> BaseShell:
+    shell_class_name = shell_classes[shelltype]
+    shell_module = import_module(f"flask_moreshell.shells.{shelltype}_shell")
+    shell_class: type[BaseShell] = getattr(shell_module, shell_class_name)
+    return shell_class()
+
+
+def _find_available_shell(shell_classes: dict[str, str]) -> BaseShell:
+    for shell_class in shell_classes.keys():
+        try:
+            return _get_shell_instance(shell_class, shell_classes)
+        except ModuleNotFoundError:
+            continue
 
 
 @click.command(context_settings=dict(ignore_unknown_options=True))
@@ -31,23 +48,10 @@ def shell(shelltype: str) -> None:
     }
 
     if shelltype:
-        shell_class = shell_classes[shelltype]
-        try:
-            shell_module = importlib.import_module(
-                f"flask_moreshell.shells.{shelltype}_shell"
-            )
-            shell_class = getattr(shell_module, shell_class)
-            shell_class().load()
-        except ModuleNotFoundError as e:
-            print(e)
+        _shell = _get_shell_instance(shelltype, shell_classes)
+        _shell.load()
+        sys.exit(0)
     else:
-        for shell_class in shell_classes.keys():
-            try:
-                shell_module = importlib.import_module(
-                    f"flask_moreshell.shells.{shell_class}_shell"
-                )
-                shell_class = getattr(shell_module, shell_classes[shell_class])
-                shell_class().load()
-                sys.exit(0)
-            except ModuleNotFoundError:
-                continue
+        _shell = _find_available_shell(shell_classes)
+        _shell.load()
+        sys.exit(0)
