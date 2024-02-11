@@ -20,6 +20,7 @@ def _find_available_shell(shell_classes: dict[str, str]) -> BaseShell:
             return _get_shell_instance(shell_class, shell_classes)
         except ModuleNotFoundError:
             continue
+    return _get_shell_instance("python", shell_classes)
 
 
 @click.command(context_settings=dict(ignore_unknown_options=True))
