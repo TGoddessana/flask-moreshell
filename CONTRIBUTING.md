@@ -92,7 +92,7 @@ and are written using the [pytest] testing framework.
 Open a [pull request] to submit changes to this project.
 
 warning:: this project is still in its early stages. still, CI-CD workflow is not yet implemented.
-so do not worry to much about the test(coverage, mypy, typeguard or etc). our first priority is to get the project have
+so do not worry to much about the test(coverage, mypy or etc). our first priority is to get the project have
 a stable test workflow.
 
 Feel free to submit early, though—we can always iterate on this.
