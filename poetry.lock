@@ -1475,19 +1475,19 @@ wcwidth = "*"
 
 [[package]]
 name = "ptpython"
-version = "3.0.23"
+version = "3.0.26"
 description = "Python REPL build on top of prompt_toolkit"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "ptpython-3.0.23-py2.py3-none-any.whl", hash = "sha256:51069503684169b21e1980734a9ba2e104643b7e6a50d3ca0e5669ea70d9e21c"},
-    {file = "ptpython-3.0.23.tar.gz", hash = "sha256:9fc9bec2cc51bc4000c1224d8c56241ce8a406b3d49ec8dc266f78cd3cd04ba4"},
+    {file = "ptpython-3.0.26-py2.py3-none-any.whl", hash = "sha256:3dc4c066d049e16d8b181e995a568d36697d04d9acc2724732f3ff6686c5da57"},
+    {file = "ptpython-3.0.26.tar.gz", hash = "sha256:c8fb1406502dc349d99c57eaf06e7116f3b2deac94f02f342bae68708909f743"},
 ]
 
 [package.dependencies]
 appdirs = "*"
 jedi = ">=0.16.0"
-prompt-toolkit = ">=3.0.28,<3.1.0"
+prompt-toolkit = ">=3.0.34,<3.1.0"
 pygments = "*"
 
 [package.extras]
