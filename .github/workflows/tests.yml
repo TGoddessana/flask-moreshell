@@ -39,7 +39,6 @@ jobs:
 
       - name: Upgrade pip
         run: |
-          cd $GITHUB_WORKSPACE
           pip install --constraint=.github/workflows/constraints.txt pip
           pip --version
 
@@ -54,7 +53,7 @@ jobs:
 
       - name: Install Poetry
         run: |
-          cd $GITHUB_WORKSPACE
+          pwd
           pipx install --pip-args=--constraint=.github/workflows/constraints.txt poetry
           poetry --version
 
