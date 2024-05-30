@@ -28,6 +28,10 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
+      - name: Set working directory
+        run: |
+          ls -a .github/workflows/
+
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v5
         with:
@@ -35,7 +39,7 @@ jobs:
 
       - name: Upgrade pip
         run: |
-          pip install --constraint=.github/workflows/constraints.txt pip
+          pip install --constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt pip
           pip --version
 
       - name: Upgrade pip in virtual environments
@@ -49,13 +53,13 @@ jobs:
 
       - name: Install Poetry
         run: |
-          pipx install --pip-args=--constraint=.github/workflows/constraints.txt poetry
+          pipx install --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt poetry
           poetry --version
 
       - name: Install Nox
         run: |
-          pipx install --pip-args=--constraint=.github/workflows/constraints.txt nox
-          pipx inject --pip-args=--constraint=.github/workflows/constraints.txt nox nox-poetry
+          pipx install --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt nox
+          pipx inject --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt nox nox-poetry
           nox --version
 
       - name: Compute pre-commit cache key
@@ -114,18 +118,18 @@ jobs:
 
       - name: Upgrade pip
         run: |
-          pip install --constraint=.github/workflows/constraints.txt pip
+          pip install --constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt pip
           pip --version
 
       - name: Install Poetry
         run: |
-          pipx install --pip-args=--constraint=.github/workflows/constraints.txt poetry
+          pipx install --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt poetry
           poetry --version
 
       - name: Install Nox
         run: |
-          pipx install --pip-args=--constraint=.github/workflows/constraints.txt nox
-          pipx inject --pip-args=--constraint=.github/workflows/constraints.txt nox nox-poetry
+          pipx install --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt nox
+          pipx inject --pip-args=--constraint=$GITHUB_WORKSPACE/.github/workflows/constraints.txt nox nox-poetry
           nox --version
 
       - name: Download coverage data
