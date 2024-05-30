@@ -28,6 +28,10 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
+      - name: Set working directory
+        run: |
+          cd $GITHUB_WORKSPACE
+
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v5
         with:
