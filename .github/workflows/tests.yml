@@ -30,7 +30,7 @@ jobs:
 
       - name: Set working directory
         run: |
-          ls -a
+          ls -a .github/workflows
 
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v5
