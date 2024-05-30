@@ -30,7 +30,7 @@ jobs:
 
       - name: Set working directory
         run: |
-          ls -a .github/workflows
+          ls -a .github/workflows/
 
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v5
@@ -39,6 +39,7 @@ jobs:
 
       - name: Upgrade pip
         run: |
+          cd $GITHUB_WORKSPACE
           pip install --constraint=.github/workflows/constraints.txt pip
           pip --version
 
@@ -53,6 +54,7 @@ jobs:
 
       - name: Install Poetry
         run: |
+          cd $GITHUB_WORKSPACE
           pipx install --pip-args=--constraint=.github/workflows/constraints.txt poetry
           poetry --version
 
