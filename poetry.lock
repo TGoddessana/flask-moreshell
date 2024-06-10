@@ -1480,13 +1480,13 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.41"
+version = "3.0.46"
 description = "Library for building powerful interactive command lines in Python"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "prompt_toolkit-3.0.41-py3-none-any.whl", hash = "sha256:f36fe301fafb7470e86aaf90f036eef600a3210be4decf461a5b1ca8403d3cb2"},
-    {file = "prompt_toolkit-3.0.41.tar.gz", hash = "sha256:941367d97fc815548822aa26c2a269fdc4eb21e9ec05fc5d447cf09bad5d75f0"},
+    {file = "prompt_toolkit-3.0.46-py3-none-any.whl", hash = "sha256:45abe60a8300f3c618b23c16c4bb98c6fc80af8ce8b17c7ae92db48db3ee63c1"},
+    {file = "prompt_toolkit-3.0.46.tar.gz", hash = "sha256:869c50d682152336e23c4db7f74667639b5047494202ffe7670817053fd57795"},
 ]
 
 [package.dependencies]
@@ -1494,19 +1494,19 @@ wcwidth = "*"
 
 [[package]]
 name = "ptpython"
-version = "3.0.26"
+version = "3.0.27"
 description = "Python REPL build on top of prompt_toolkit"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "ptpython-3.0.26-py2.py3-none-any.whl", hash = "sha256:3dc4c066d049e16d8b181e995a568d36697d04d9acc2724732f3ff6686c5da57"},
-    {file = "ptpython-3.0.26.tar.gz", hash = "sha256:c8fb1406502dc349d99c57eaf06e7116f3b2deac94f02f342bae68708909f743"},
+    {file = "ptpython-3.0.27-py2.py3-none-any.whl", hash = "sha256:549870d537ab3244243cfb92d36347072bb8be823a121fb2fd95297af0fb42bb"},
+    {file = "ptpython-3.0.27.tar.gz", hash = "sha256:24b0fda94b73d1c99a27e6fd0d08be6f2e7cda79a2db995c7e3c7b8b1254bad9"},
 ]
 
 [package.dependencies]
 appdirs = "*"
 jedi = ">=0.16.0"
-prompt-toolkit = ">=3.0.34,<3.1.0"
+prompt-toolkit = ">=3.0.43,<3.1.0"
 pygments = "*"
 
 [package.extras]
